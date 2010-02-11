@@ -6,11 +6,11 @@ import org.springframework.stereotype.Service;
 import javax.sql.DataSource;
 
 @Service
-public class BatchService {
+public class Process {
     private DataSource dataSource;
 
     @Autowired
-    public BatchService(DataSource dataSource) {
+    public Process(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
