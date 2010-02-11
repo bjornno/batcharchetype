@@ -1,5 +1,6 @@
 package ${groupId}.service;
 
+import bjornno.javabatch.BatchFileReciever;
 import java.io.Reader;
 
 public class Input implements BatchFileReciever {

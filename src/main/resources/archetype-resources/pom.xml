@@ -197,7 +197,7 @@
         <spring.version>3.0.0.RELEASE</spring.version>
         <version.maven.compiler.plugin>2.0.2</version.maven.compiler.plugin>
         <version.maven.surefire.plugin>2.4.3</version.maven.surefire.plugin>
-        <version.maven.assembly.plugin>2.2-beta-2</version.maven.assembly.plugin>
+        <version.maven.assembly.plugin>2.2-beta-4</version.maven.assembly.plugin>
         <version.maven.appassembler.plugin>1.0-alpha-2</version.maven.appassembler.plugin>
         <version.maven.war.plugin>2.0.2</version.maven.war.plugin>
         <version.maven.source.plugin>2.0.4</version.maven.source.plugin>
@@ -205,7 +205,7 @@
         <version.maven.site.plugin>2.0-beta-5</version.maven.site.plugin>
         <version.maven.release.plugin>2.0-beta-7</version.maven.release.plugin>
         <version.maven.deploy.plugin>2.4</version.maven.deploy.plugin>
-        <jetty.version>6.0</jetty.version>
+        <jetty.version>6.1.22</jetty.version>
     </properties>
 
 </project>
