@@ -20,10 +20,12 @@
     <context:annotation-config/>
     <task:annotation-driven/>
 
+    <!--
     <jdbc:embedded-database id="dataSource" type="HSQL">
         <jdbc:script location="db-provision.sql"/>
     </jdbc:embedded-database>
+    -->
     <bean id="fileinn" class="${groupId}.service.Input"/>
-    <bean id="fileinnscheduler" class="bjornno.javabatch.BatchFileScanScheduler"><constructor-arg ref="fileinn" index="0"/><constructor-arg value="c:\temp\fileinn" index="1"/> </bean>
-    
+    <bean id="fileinnscheduler" class="bjornno.javabatch.BatchFileScanScheduler" init-method="run"><constructor-arg ref="fileinn"/><constructor-arg value="c:\\temp\\fileinn"/> </bean>
+       
 </beans>
