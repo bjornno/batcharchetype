@@ -18,10 +18,11 @@
     <bean id="asynchWorkManager" class="bjornno.asynchwork.database.SpringWorkManager">
         <constructor-arg>
             <map>
-                <entry><key>processor</key><bean id="processor" class="${groupId}.service.Process"/></entry>
+                <entry key="processor"><bean id="processor" class="bjornno.service.Process"/></entry>
             </map>
         </constructor-arg>
         <constructor-arg ref="receiver"/>
+        <constructor-arg ref="dataSource"/>
     </bean>
     <bean id="asynchworkScanner" class="bjornno.asynchwork.database.StupidScheduler" init-method="start">
         <property name="workManager" ref="asynchWorkManager"/>

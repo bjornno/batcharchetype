@@ -12,6 +12,7 @@ public class Input implements BatchFileReciever {
     }
 
     public void recieve(Reader reader) {
+        System.out.println("Recieving file, sending message.");
         sender.send("processor", "hei");
     }
 }
