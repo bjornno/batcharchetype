@@ -1,13 +1,26 @@
 package ${groupId}.service;
 
-import bjornno.asynchwork.Message;
-import bjornno.asynchwork.ReceivingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import javax.sql.DataSource;
+
+@Service
 public class Process {
-    public void receive(Message message) {
-        System.out.println(message.getPayload());
+    private DataSource dataSource;
+
+    @Autowired
+    public Process(DataSource dataSource) {
+        this.dataSource = dataSource;
     }
-    public String getReceiverName() {
-        return "processor";
+
+
+    public String doSomething() {
+        if (dataSource == null) {
+            throw new RuntimeException("Jikes");
+        }
+        System.out.println("Hei");
+        return "hei";
+        
     }
 }
